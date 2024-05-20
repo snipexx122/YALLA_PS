@@ -5,6 +5,7 @@ function RegistrationForm() {
     const [firstName, setFirstName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [email, setEmail] = useState(null);
+    const [phone, setPhone] = useState(null);
     const [password,setPassword] = useState(null);
     const [confirmPassword,setConfirmPassword] = useState(null);
 
@@ -19,6 +20,9 @@ function RegistrationForm() {
         if(id === "email"){
             setEmail(value);
         }
+        if(id === "phone"){
+            setPhone(value);
+        }
         if(id === "password"){
             setPassword(value);
         }
@@ -29,7 +33,7 @@ function RegistrationForm() {
     }
 
     const handleSubmit  = () => {
-        console.log(firstName,lastName,email,password,confirmPassword);
+        console.log(firstName,lastName,email,phone,password,confirmPassword);
     }
     return(
         <div className="form">
@@ -43,6 +47,10 @@ function RegistrationForm() {
                     <input  type="text" name="" id="lastName" value={lastName}  className="form__input" onChange = {(e) => handleInputChange(e)} placeholder="LastName"/>
                 </div>
                 <div className="email">
+                    <label className="form__label" for="phone">Phone </label>
+                    <input  type="tel" id="phone" className="form__input" value={phone} onChange = {(e) => handleInputChange(e)} placeholder="Phone"/>
+                </div>
+                <div className="phone">
                     <label className="form__label" for="email">Email </label>
                     <input  type="email" id="email" className="form__input" value={email} onChange = {(e) => handleInputChange(e)} placeholder="Email"/>
                 </div>
