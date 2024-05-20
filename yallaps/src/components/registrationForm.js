@@ -1,5 +1,5 @@
 import React, {useState,setState} from 'react';
-import './style.css'
+import './style.css';
 function RegistrationForm() {
 
     const [firstName, setFirstName] = useState(null);
@@ -65,6 +65,7 @@ function RegistrationForm() {
             </div>
             <div class="footer">
                 <button onClick={()=>handleSubmit()} type="submit" class="btn">Register</button>
+                <a href="#">Already Registed</a>
             </div>
         </div>
        

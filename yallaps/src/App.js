@@ -1,20 +1,30 @@
 
 import './App.css';
-import Header from './components/header';
-import RegistrationForm from './components/registrationForm';
+import { Outlet, Link} from "react-router-dom";
+
 
 function App() {
   return (
-    <div>
-      <div className="header">
-        <Header />
-      </div>
-      <div className="App">
-        
-        <RegistrationForm />
-      </div>
-    </div>  
+   <> 
+      <nav className="navbar">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="./components/registerationForm">Register</Link>
+            </li>
+            <li>
+              <Link to="./components/login">Login</Link>
+            </li>
+          </ul>
+      </nav>
+
+      <Outlet />
+    </>
   );
 }
+
+
 
 export default App;
