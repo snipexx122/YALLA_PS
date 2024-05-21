@@ -16,10 +16,6 @@ function Login() {
         }
     }
 
-    function formValidate(){
-        return email.length>0&&password.length>0;
-    }
-
 
     function sayDone(){
         console.log("Done");
@@ -27,22 +23,25 @@ function Login() {
 
     return (
 
-        <div className="form">
-            <div className="form-body">
+      <div name="login"> 
+            <h1>Login Page</h1>
+            <div  className="form">
+                <div className="form-body">
                 <div className="email">
-                    <label className="form__label" for="email">Email </label>
-                    <input  type="tel" id="email" className="form__input" value={email} onChange = {(e) => handleInputChange(e)} placeholder="Email"/>
+                        <label className="form__label" for="email">Email </label>
+                        <input  type="email" id="email" className="form__input" value={email} onChange = {(e) => handleInputChange(e)} placeholder="Email"/>
+                    </div>
+                    <div className="password">
+                        <label className="form__label" for="password">Password </label>
+                        <input className="form__input" type="password"  id="password" value={password} onChange = {(e) => handleInputChange(e)} placeholder="Password"/>
+                    </div>
                 </div>
-                <div className="password">
-                    <label className="form__label" for="password">Password </label>
-                    <input className="form__input" type="password"  id="password" value={password} onChange = {(e) => handleInputChange(e)} placeholder="Password"/>
+                <div class="footer">
+                    <button onClick={()=>sayDone()}  type="submit" class="btn">Register</button>
+                    <a href="#">Need To Registe</a>
                 </div>
             </div>
-            <div class="footer">
-                <button disabled={!formValidate()} onClick={()=>sayDone()}  type="submit" class="btn">Register</button>
-                <a href="#">Need To Registed</a>
-            </div>
-        </div>
+      </div>  
     );
 }
 

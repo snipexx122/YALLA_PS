@@ -1,13 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RegistrationForm from './components/registrationForm';
+import Login from './components/login';
+import Home from './components/home';
+import Layout from './components/layout';
 
 
+export default function App(){
+  return (
+    <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Layout />}>
+                  <Route index element={<Home />} />
+                  <Route path="registrationForm" element={<RegistrationForm />} />
+                  <Route path="login" element={<Login />} />   
+              </Route>
+          </Routes>
+    </BrowserRouter>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+/*
+
 
 root.render(
 
@@ -19,7 +39,7 @@ root.render(
 
 
 
-
+*/
 
 
 // If you want to start measuring performance in your app, pass a function

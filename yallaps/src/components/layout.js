@@ -1,8 +1,8 @@
-import React from 'react';
+
 import './style.css';
-import RegistrationForm from './registrationForm';
-import Login from './login';
+
 import { Outlet, Link} from "react-router-dom";
+
 
 function Layout () {
     return (
@@ -14,10 +14,10 @@ function Layout () {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="registrationForm">Register</Link>
+                    <Link to="/registrationForm">Register</Link>
                 </li>
                 <li>
-                    <Link to="login">Login</Link>
+                    <Link to="/login">Login</Link>
                 </li>
                 </ul>
             </nav>
