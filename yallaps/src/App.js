@@ -1,27 +1,21 @@
-
+import {  Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
-import { Outlet, Link} from "react-router-dom";
+import Home from './components/home';
+import Layout from './components/layout';
+import {Link} from "react-router-dom";
+import RegistrationForm from './components/registrationForm';
+import Login from './components/login';
 
 
 function App() {
   return (
-   <> 
-      <nav className="navbar">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="./components/registerationForm">Register</Link>
-            </li>
-            <li>
-              <Link to="./components/login">Login</Link>
-            </li>
-          </ul>
-      </nav>
-
-      <Outlet />
-    </>
+      <div>
+          <Routes path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="./components/registrationForm" element={<RegistrationForm />} />
+              <Route path="./components/login" element={<Login />} />
+          </Routes>
+      </div>
   );
 }
 
