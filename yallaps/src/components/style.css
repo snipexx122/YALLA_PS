@@ -14,10 +14,51 @@ body{
     /* height: 600px; */
 }
 
+.navbar {
+    background-color: black;
+    
+}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-h3{
+.list {
+    display: flex;
+    font-size: 20px;
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.home {
+    text-decoration: none;
     color: white;
+}
+
+.home:link {
+    text-decoration: none;
+    color: red;
+}
+.home:visited {
+    text-decoration: none;
+    color: white;
+}
+.home:hover {
+    text-decoration: none;
+    color: hotpink;
+}
+.home:active {
+    text-decoration: none;
+    color: blue;
+}
+
+
+h1{
+    color: white;
+    text-align: center;
 }
 
 .form-body{
@@ -51,4 +92,9 @@ h3{
 
 a{
     margin: 25px;
+}
+
+img {
+    border-radius: 8px;
+    width: 500px;
 }

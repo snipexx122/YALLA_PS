@@ -9,16 +9,16 @@ function Layout () {
 
         <div> 
             <nav className="navbar">
-                <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/registrationForm">Register</Link>
-                </li>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
+                <ul className="list">
+                    <li>
+                        <Link to="/" className="home">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/registrationForm" className="home">Register</Link>
+                    </li>
+                    <li>
+                        <Link to="/login" className="home">Login</Link>
+                    </li>
                 </ul>
             </nav>
   
