@@ -38,7 +38,6 @@ function Login() {
                 </div>
                 <div class="footer">
                     <button onClick={()=>sayDone()}  type="submit" class="btn">Register</button>
-                    <a href="#">Need To Registe</a>
                 </div>
             </div>
       </div>  
