@@ -108,4 +108,6 @@ a{
 img {
     border-radius: 8px;
     width: 500px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
