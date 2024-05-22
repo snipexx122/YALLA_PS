@@ -107,8 +107,10 @@ a{
 }
 
 img {
+    
     border-radius: 8px;
     width: 500px;
+    height: 280px;
     margin-left: 50px;
     margin-top: 50px;
 }
