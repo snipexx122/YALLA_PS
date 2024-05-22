@@ -36,6 +36,7 @@ ul {
 .home {
     text-decoration: none;
     color: white;
+    display: flex;
 }
 
 .home:link {
@@ -53,6 +54,16 @@ ul {
 .home:active {
     text-decoration: none;
     color: blue;
+}
+
+#forHome {
+    
+    font-size: xx-large;
+}
+
+#forForm {
+    
+   margin-bottom: 40px;
 }
 
 

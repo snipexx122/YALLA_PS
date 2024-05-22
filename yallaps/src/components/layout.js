@@ -11,13 +11,13 @@ function Layout () {
             <nav className="navbar">
                 <ul className="list">
                     <li>
-                        <Link to="/" className="home">Home</Link>
+                        <Link to="/" className="home" id="forHome">Yalla Ps</Link>
                     </li>
                     <li>
-                        <Link to="/registrationForm" className="home">Register</Link>
+                        <Link to="/registrationForm" className="home" id="forForm">Register</Link>
                     </li>
                     <li>
-                        <Link to="/login" className="home">Login</Link>
+                        <Link to="/login" className="home" id="forForm">Login</Link>
                     </li>
                 </ul>
             </nav>
