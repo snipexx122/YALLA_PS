@@ -7,6 +7,8 @@ import RegistrationForm from './components/registrationForm';
 import Login from './components/login';
 import Home from './components/home';
 import Layout from './components/layout';
+import RegistrationFormUser from './components/registrationFormUser';
+import LoginUser from './components/loginUser';
 
 
 export default function App(){
@@ -15,8 +17,10 @@ export default function App(){
           <Routes>
               <Route path="/" element={<Layout />}>
                   <Route index element={<Home />} />
-                  <Route path="registrationForm" element={<RegistrationForm />} />
-                  <Route path="login" element={<Login />} />   
+                  <Route path="loginUser" element={<LoginUser />} />
+                  <Route path="login" element={<Login />} />  
+                  <Route path="registrationFormUser" element={<RegistrationFormUser />} />  
+                  <Route path="registrationForm" element={<RegistrationForm />} /> 
               </Route>
           </Routes>
     </BrowserRouter>
