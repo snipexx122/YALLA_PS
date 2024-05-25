@@ -2,12 +2,25 @@ import React, {useState,setState} from 'react';
 import './style.css';
 function RegistrationForm() {
 
+    const [data, setData] = useState(null);
     const [firstName, setFirstName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [email, setEmail] = useState(null);
     const [phone, setPhone] = useState(null);
+    const [cyperName, setCyperName] = useState(null);
+    const [location, setLocation] = useState(null);
     const [password,setPassword] = useState(null);
     const [confirmPassword,setConfirmPassword] = useState(null);
+
+    const consoles=["PC","PS","Both"];
+
+    const onOptionChangeHandler = (e) => {
+        setData(e.target.value);
+        console.log(
+            "Cyper Owner Selected Console - ",e.target.value
+        );
+    };
+
 
     const handleInputChange = (e) => {
         const {id , value} = e.target;
@@ -23,6 +36,12 @@ function RegistrationForm() {
         if(id === "phone"){
             setPhone(value);
         }
+        if(id === "cyperName"){
+            setCyperName(value);
+        }
+        if(id === "location"){
+            setLocation(value);
+        }
         if(id === "password"){
             setPassword(value);
         }
@@ -33,7 +52,7 @@ function RegistrationForm() {
     }
 
     const handleSubmit  = () => {
-        console.log(firstName,lastName,email,phone,password,confirmPassword);
+        console.log(firstName,lastName,email,phone,cyperName,location,password,confirmPassword);
     }
     return(
       <div name="registrationForm"> 
@@ -55,6 +74,27 @@ function RegistrationForm() {
                     <div className="email">
                         <label className="form__label" for="email">Email </label>
                         <input  type="email" id="email" className="form__input" value={email} onChange = {(e) => handleInputChange(e)} placeholder="Email"/>
+                    </div>
+                    <div className="cyperName">
+                        <label className="form__label" for="cyperName">Cyper Name </label>
+                        <input  type="cyperName" id="cyperName" className="form__input" value={cyperName} onChange = {(e) => handleInputChange(e)} placeholder="CyperName"/>
+                    </div>
+                    <div className="location">
+                        <label className="form__label" for="location">Location </label>
+                        <input  type="text" id="location" className="form__input" value={location} onChange = {(e) => handleInputChange(e)} placeholder="Location"/>
+                    </div>
+                    <div className="data">
+                        <label className="form__label" for="console">Choose a Console:</label>
+                        <select className="form__input" name="console" onChange = {onOptionChangeHandler}>
+                            <option>Please choose one option</option>
+                            {consoles.map((console,index)=>{
+                                return (
+                                    <option key={index}>
+                                        {console}
+                                    </option>
+                                );
+                            })}
+                        </select>
                     </div>
                     <div className="password">
                         <label className="form__label" for="password">Password </label>
