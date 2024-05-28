@@ -107,6 +107,7 @@ function RegistrationForm() {
                 </div>
                 <div class="footer">
                     <button onClick={()=>handleSubmit()} type="submit" class="btn">Register</button>
+                    <a href="/login">Already Registrated !!</a>
                 </div>
             </div>
       </div>  

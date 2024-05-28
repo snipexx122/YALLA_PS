@@ -14,10 +14,10 @@ function Layout () {
                         <Link to="/" className="home" id="forHome">Yalla Ps</Link>
                     </li>
                     <li>
-                        <Link to="/registrationForm" className="home" id="forForm">Register</Link>
+                        <Link to="/loginUser" className="home" id="forForm">User</Link>
                     </li>
                     <li>
-                        <Link to="/login" className="home" id="forForm">Login</Link>
+                        <Link to="/login" className="home" id="forForm">Cyper Owner</Link>
                     </li>
                 </ul>
             </nav>

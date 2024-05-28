@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './style.css';
 
-function Login() {
+function LoginUser() {
 
     const [email, setEmail] = useState(null);
     const [password,setPassword] = useState(null);
@@ -23,7 +23,7 @@ function Login() {
 
     return (
 
-      <div name="login"> 
+      <div name="loginUser"> 
             <h1>Login Page</h1>
             <div  className="form">
                 <div className="form-body">
@@ -38,11 +38,11 @@ function Login() {
                 </div>
                 <div class="footer">
                     <button onClick={()=>sayDone()}  type="submit" class="btn">Register</button>
-                    <a href="/registrationForm">Need to Register</a>
+                    <a href="/registrationFormUser">Need to Register</a>
                 </div>
             </div>
       </div>  
     );
 }
 
-export default Login;
+export default LoginUser;
