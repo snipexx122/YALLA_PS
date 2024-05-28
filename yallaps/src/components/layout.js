@@ -17,7 +17,7 @@ function Layout () {
                         <Link to="/loginUser" className="home" id="forForm">User</Link>
                     </li>
                     <li>
-                        <Link to="/login" className="home" id="forForm">Cyper Owner</Link>
+                        <Link to="/login" className="home" id="forForm">Cyber Owner</Link>
                     </li>
                 </ul>
             </nav>
