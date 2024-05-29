@@ -9,6 +9,8 @@ import Home from './components/home';
 import Layout from './components/layout';
 import RegistrationFormUser from './components/registrationFormUser';
 import LoginUser from './components/loginUser';
+import ProfileUser from './Pages/ProfileUser';
+import ProfileAdmin from './Pages/ProfileAdmin';
 
 
 export default function App(){
@@ -21,6 +23,8 @@ export default function App(){
                   <Route path="login" element={<Login />} />  
                   <Route path="registrationFormUser" element={<RegistrationFormUser />} />  
                   <Route path="registrationForm" element={<RegistrationForm />} /> 
+                  <Route path="profileuser" element={<ProfileUser />} />
+                  <Route path="profileAdmin" element={<ProfileAdmin />} />
               </Route>
           </Routes>
     </BrowserRouter>

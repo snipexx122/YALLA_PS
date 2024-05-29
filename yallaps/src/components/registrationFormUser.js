@@ -1,5 +1,6 @@
 import React, {useState,setState} from 'react';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 function RegistrationFormUser() {
 
@@ -10,6 +11,8 @@ function RegistrationFormUser() {
     const [password,setPassword] = useState(null);
     const [confirmPassword,setConfirmPassword] = useState(null);
 
+    const navigate = useNavigate();
+    
     const handleInputChange = (e) => {
         const {id , value} = e.target;
         if(id === "firstName"){
@@ -35,6 +38,7 @@ function RegistrationFormUser() {
 
     const handleSubmit  = () => {
         console.log(firstName,lastName,email,phone,password,confirmPassword);
+        navigate('/profileUser');
     }
 
     return(
