@@ -1,5 +1,7 @@
 import React, {useState,setState} from 'react';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
+
 function RegistrationForm() {
 
     const [data, setData] = useState(null);
@@ -11,6 +13,8 @@ function RegistrationForm() {
     const [location, setLocation] = useState(null);
     const [password,setPassword] = useState(null);
     const [confirmPassword,setConfirmPassword] = useState(null);
+
+    const navigate = useNavigate();
 
     const consoles=["PC","PS","Both"];
 
@@ -53,6 +57,7 @@ function RegistrationForm() {
 
     const handleSubmit  = () => {
         console.log(firstName,lastName,email,phone,cyperName,location,password,confirmPassword);
+        navigate('/profileAdmin');
     }
     return(
       <div name="registrationForm"> 

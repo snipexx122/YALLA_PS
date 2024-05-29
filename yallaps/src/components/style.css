@@ -1,39 +1,98 @@
-body{
-    background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.form{
+body {
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  }
+  
+  .form {
     background-color: white;
     border-radius: 5px;
     width: 550px;
     margin: 20px auto;
     padding: 20px;
-    /* height: 600px; */
-}
-
-.navbar {
+  }
+  
+  .navbar {
     background-color: black;
-    
-}
-
-ul {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+  }
+  
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-.list {
+    display: flex;
+    align-items: center;
+  }
+  
+  .list {
     display: flex;
     font-size: 20px;
     list-style-type: none;
     padding: 0;
-    
-}
-
-
+  }
+  
+  .search-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    max-width: 600px; 
+    width: 100%;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-group .form-control {
+    border-radius: 0;
+    height: 70%;
+    width: calc(100% - 40px);
+  }
+  
+  .input-group .input-group-text {
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    width: 40px;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+  
+  .search-result-item h5,
+  .search-result-item p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
 .home {
     text-decoration: none;
     color: white;
